@@ -1,0 +1,116 @@
+# Generated from: 4.1-functions.ipynb
+# Converted at: 2026-03-01T14:39:56.039Z
+# Next step (optional): refactor into modules & generate tests with RunCell
+# Quick start: pip install runcell
+
+# #### Functions in Python
+# Video Outline:
+# 1. Introduction to Functions
+# 2. Defining Functions
+# 3. Calling Functions
+# 4. Function Parameters
+# 5. Default Parameters
+# 6. Variable-Length Arguments
+# 7. Return Statement
+
+
+# ##### Introduction to Functions
+# Definition:
+# 
+# A function is a block of code that performs a specific task.
+# Functions help in organizing code, reusing code, and improving readability.
+# 
+# 
+
+
+## syntax
+def function_name(parameters):
+    """Docstring"""
+    # Function body
+    return expression
+
+
+## why functions?
+num=24
+if num%2==0:
+    print("the number is even")
+else:
+    print("the number is odd")
+
+def even_or_odd(num):
+    """This function finds even or odd"""
+    if num%2==0:
+        print("the number is even")
+    else:
+        print("the number is odd")
+
+
+## Call this function
+even_or_odd(24)
+
+## function with multiple parameters
+
+def add(a,b):
+    return a+b
+
+result=add(2,4)
+print(result)
+    
+
+## Default Parameters
+
+def greet(name):
+    print(f"Hello {name} Welcome To the paradise")
+
+greet("Krish")
+
+
+def greet(name="Guest"):
+    print(f"Hello {name} Welcome To the paradise")
+
+greet("Krish")
+
+### Variable Length Arguments
+## Positional And Keywords arguments
+
+def print_numbers(*krish):
+    for number in krish:
+        print(number)
+
+print_numbers(1,2,3,4,5,6,7,8,"Krish")
+
+## Positional arguments
+def print_numbers(*args):
+    for number in args:
+        print(number)
+
+print_numbers(1,2,3,4,5,6,7,8,"Krish")
+
+### Keywords Arguments
+
+def print_details(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key}:{value}")
+
+print_details(name="Krish",age="32",country="India")
+
+def print_details(*args,**kwargs):
+    for val in args:
+        print(f" Positional arument :{val}")
+    
+    for key,value in kwargs.items():
+        print(f"{key}:{value}")
+
+print_details(1,2,3,4,"Krish",name="Krish",age="32",country="India")
+
+### Return statements
+def multiply(a,b):
+    return a*b
+
+multiply(2,3)
+
+### Return multiple parameters
+def multiply(a,b):
+    return a*b,a
+
+multiply(2,3)
